@@ -3,9 +3,9 @@ jobs:
   one:
     docker:
       - image: cimg/ruby:2.6.8 # specifically,a docker image with ruby 2.6.8
-      auth:
-        username: mydockerhub-user
-        password: $DOCKERHUB_PASSWORD # context / project UI env-var reference
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD # context / project UI env-var reference
     steps:
       - checkout
       - run: echo "A first hello"
@@ -13,9 +13,9 @@ jobs:
   two:
     docker:
       - image: cimg/ruby:3.0.2
-      auth:
-        username: mydockerhub-user
-        password: $DOCKERHUB_PASSWORD
+        auth:
+          sername: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - run: echo "A more familiar hi"
